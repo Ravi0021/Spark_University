@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    if request.method!="POST":
+        return HttpResponse("<h2>Methd Not Allowed</h2>")
+    else:
+        return HttpResponseRedirect("Email : "+request.POST.get("email")+"Password : "+request.POST.get("password"))      
+</body>
+</html>
